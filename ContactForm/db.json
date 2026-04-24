@@ -1,0 +1,254 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "Nome": "vieira",
+      "Sobrenome": "silva",
+      "E-mail": "Eduardocosta@example.com",
+      "id": "1"
+    },
+    {
+      "Nome": "Eduardo",
+      "Sobrenome": "Costa",
+      "E-mail": "Eduardocosta@example.com",
+      "id": "7sowtRqPGME"
+    },
+    {
+      "Nome": "gustavo",
+      "Sobrenome": "silva",
+      "E-mail": "gustavo@example.com",
+      "id": "6wOqxRvvLg4"
+    },
+    {
+      "Nome": "joao",
+      "Sobrenome": "silva",
+      "E-mail": "joao@example.com",
+      "id": "zyTeGjpsrT4"
+    },
+    {
+      "Nome": "guilherme",
+      "Sobrenome": "silva",
+      "E-mail": "guilherme@example.com",
+      "id": "FEP5izL5tCw"
+    },
+    {
+      "Nome": "chiclete",
+      "quantidade": "2",
+      "preco": "7,00",
+      "id": "G3rBxaDh6NI"
+    },
+    {
+      "Nome": "bombom",
+      "quantidade": "2",
+      "preco": "4,00",
+      "id": "XAVdynFNwxY"
+    },
+    {
+      "Nome": "gilette",
+      "quantidade": "2",
+      "preco": "13,00",
+      "id": "2QFojanZ2Ow"
+    },
+    {
+      "Nome": "barra de chocolate",
+      "quantidade": "2",
+      "preco": "8,00",
+      "id": "11Ul9c6R8kw"
+    },
+    {
+      "Nome": "navalha",
+      "quantidade": "2",
+      "preco": "10,00",
+      "id": "PtLnkMpYR70"
+    }
+  ],
+  "produtos": [
+    {
+      "Nome": "chiclete",
+      "quantidade": "2",
+      "preco": "7,00",
+      "id": "1"
+    },
+    {
+      "Nome": "pente",
+      "quantidade": "2",
+      "preco": "10,00",
+      "id": "AZIPdpwR6CI"
+    },
+    {
+      "Nome": "escova",
+      "quantidade": "2",
+      "preco": "10,00",
+      "id": "tc_1Hir6k-k"
+    },
+    {
+      "Nome": "pasta",
+      "quantidade": "2",
+      "preco": "10,00",
+      "id": "EBRJSDmhueY"
+    },
+    {
+      "Nome": "fio dental",
+      "quantidade": "2",
+      "preco": "10,00",
+      "id": "KmzftPyVJ4k"
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "GAFwz2EgpEk"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "DgNGdzAVaHQ"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "K8fqDclf3Qg"
+    },
+    {
+      "nome": "josse",
+      "altura": 1.8,
+      "peso": 85,
+      "imc": 26.234567901234566,
+      "textoIMC": "Sobrepeso",
+      "id": "ORgtRFRowpQ"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "KPAmPd5zWRk"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "vQypivC_W0I"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "X9004axCXO8"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "4i7ZTlSmijY"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "I5TzjasU1zA"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "gyQcMT7sfZk"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "griN65_I7mM"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "8C_HrIwpoRM"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "SaV_t_xTeeQ"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "7ekrmePfocw"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "0zRClJug0cg"
+    },
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "imc": 30.477966223242138,
+      "textoIMC": "Obesidade",
+      "id": "oNObvQiF3PE"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
