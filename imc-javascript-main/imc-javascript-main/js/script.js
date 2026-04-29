@@ -1,141 +1,118 @@
+// EXPLICAÇÃO SOBRE JSON E LOCAL STORAGE
+
+// let pessoa = {
+//     nome: "Eduardo",
+//     idade: 38
+// }
+
+// let stringPessoa = JSON.stringify(pessoa);
+
+// console.log(pessoa);
+// console.log(stringPessoa);
+
+// localStorage.setItem("pessoa", pessoa);
+// localStorage.setItem("stringPessoa", stringPessoa);
+
+
+// console.log(JSON.parse(localStorage.getItem("stringPessoa")));
+// localStorage.setItem("listaPessoas", 'teste');
+
+
+// COMEÇO DO PROGRAMA
+let listaPessoas; //undefined
+
+if (localStorage.getItem("listaPessoas") == null) { //não tem dados
+    listaPessoas = []; //inicializa com array vazio
+
+} else { //não tem dados no localStorage
+    //inicializa com os dados do storage
+    listaPessoas = JSON.parse(localStorage.getItem("listaPessoas"));
+
+}
+
+exibeResultado(); //roda a função pra exibir os cadastros, caso existam
+
+// funçao para calcular IMC
+//recebe altura e pesoe retorna o cálculo
+function calculaIMC(a, p) {
+    return p / (a * a);
+}
+
+/*
+    Resultado	        Situação
+    Menor que 18.5      Magreza Severa
+    Entre 18.5 e 24.99	Peso normal
+    Entre 25 e 29.99	Acima do peso
+    Entre 30 e 34.99	Obesidade I
+    Entre 35 e 39.99	Obesidade II (severa)
+    Acima de 40	        Cuidado!!! else
+*/
+function geraSituacao(imc) {
+
+    if (imc < 18.5) {
+        return 'Magreza Severa';
+    } else if (imc >= 18.5 && imc <= 24.99) {
+        return 'Peso normal';
+    } else if (imc >= 25 && imc <= 29.99) {
+        return "Acima do peso";
+    } else if (imc >= 30 && imc <= 34.99) {
+        return 'Obesidade I';
+    } else if (imc >= 35 && imc <= 39.99) {
+        return 'Obesidade II (severa)';
+    } else { //a partir de 40
+        return 'Cuidado!!!';
+    }
+}
+
 function calcular() {
 
-  const nome = document.getElementById("nome").value;
-  const altura = parseFloat(document.getElementById("altura").value);
-  const peso = parseFloat(document.getElementById("peso").value);
+    //pegar os dados do formulário
+    let nome = document.getElementById('nome').value;
+    let altura = parseFloat(document.getElementById('altura').value);
+    let peso = parseFloat(document.getElementById('peso').value);
 
-  console.log(altura);
-  console.log(peso);
+    if (nome == "" || isNaN(altura) || isNaN(peso)) { //esqueceu campo sem preencher
+        alert("Preencha todos os campos!");
+    } else { //tudo preenchido
 
-  if (nome.trim().length == 0 || isNaN(altura) || isNaN(peso)) {
-    alert("Preencha todos os campos corretamente.");
-    return false;
-  }
-
-  const imc = calcularIMC(altura, peso);
-  const textoIMC = gerarTextoIMC(imc);
-
-  console.log(nome);
-  console.log(altura);
-  console.log(peso);
-  console.log(imc);
-  console.log(textoIMC);
-
-  const objIMC = {
-    nome: nome,
-    altura: altura,
-    peso: peso,
-    imc: imc,
-    textoIMC: textoIMC
-  }
-  const retorno = cadastrarnaAPI(objIMC);//retorna true ou false
-  if (retorno) {
-
-    const tabela = document.getElementById("cadastro");
+        //calcualar o imc
+        let imc = calculaIMC(altura, peso);
+        //gerar a situação, baseada no imc
+        let situacao = geraSituacao(imc);
 
 
+        //guardar o imc e a situação no objeto pessoa
+        let pessoa = {};
+        pessoa.nome = nome;
+        pessoa.altura = altura;
+        pessoa.peso = peso;
+        pessoa.imc = imc;
+        pessoa.situacao = situacao;
 
-    cadastro.innerHTML += ` <td>${nome}</td>
-                <td>1,80</td>
-                <td>85</td>
-                <td>26.234567901234566</td>
-                <td>Sobrepeso</td>
-                `;
-  }
-  else {
-    alert("Erro ao cadastrar na API. Tente novamente mais tarde.");
-  document.getElementById("nome").value = "";
-  document.getElementById("altura").value = "";
-  document.getElementById("peso").value = "";
-  alert(` ${nome} foi cadastrado no banco:
-  nome: ${nome}
-  altura: ${altura}
-  peso: ${peso}`
-  );
-  }
-
-}
-
-
-async function cadastrarnaAPI(objIMC) {
-
-  try {
-    const resposta = await fetch("http://localhost:3000/imc", {
-      method: "POST",
-      body: JSON.stringify(objIMC),
-      headers: {
-        "Content-Type": "application/json; charset=UTF-8"
-      }
-    });
-    return true;
-  }
-  catch (e) {
-    console.log("Erro ao cadastrar na API: " + e);
-    return false;
-  }
-
-}
-
-
-
-function calcularIMC(altura, peso) {
-  return peso / (altura * altura);
-}
-async function cadastrarMNApi(objetoCadastro) {
-
-  console.log(objetoCadastro);
-  //aqui você pode adicionar o código para enviar os dados para um servidor ou armazená-los localmente
-  let resposta = await fetch("http://localhost:3000/contatos", {
-    method: "POST",
-    body: json.stringify(objetoCadastro),
-    headers: {
-      "Content-Type": "application-json; charset=UTF-8"
+        //cadastra na lista de pessoas
+        listaPessoas.push(pessoa);
+        localStorage.setItem("listaPessoas", JSON.stringify(listaPessoas));
+        //exibir a pessoa na tela
+        exibeResultado();
     }
-  });
-}
 
+} //fim da função calcular
 
+function exibeResultado() {
+    let template = "";
 
-function gerarTextoIMC(imc) {
-  if (imc < 16.5) {
-    return "Magreza grave";
-  } else if (imc < 18.5) {
-    return "Magreza leve";
-  } else if (imc < 25) {
-    return "Peso normal";
-  } else if (imc < 30) {
-    return "Sobrepeso";
-  } else if (imc < 35) {
-    return "Obesidade";
-  } else if (imc < 38.5) {
-    return "Obesidade grave";
-  }
-}
+    for (let i = 0; i < listaPessoas.length; i++) {
+        template += `<tr>
+                        <td>${listaPessoas[i].nome}</td>
+                        <td>${listaPessoas[i].altura}</td>
+                        <td>${listaPessoas[i].peso}</td>
+                        <td>${listaPessoas[i].imc}</td>
+                        <td>${listaPessoas[i].situacao}</td>
+                    </tr>`;
 
-async function BuscarImc() {
-  //aqui você pode adicionar o código para enviar os dados para um servidor ou armazená-los localmente
-  try {
-    const retorno = await fetch("http://localhost:3000/imc");
-    const dadosRetornados = await retorno.json();
-    console.log(retorno.json());
-let template = "";
-    for (let i = 0; i < dadosRetornados.length; i++) {
-      const tabela = document.getElementById("cadastro");
-      tabela.innerHTML += ` <td>${dadosRetornados[i].nome}</td>
-                <td>${dadosRetornados[i].altura}</td>
-                <td>${dadosRetornados[i].peso}</td>
-                <td>${dadosRetornados[i].imc}</td>
-                <td>${dadosRetornados[i].textoIMC}</td>
-                
-                `;
-                
     }
-    tabela.innerHTML = template;
-  } catch (e) {
-    console.log("Erro ao buscar IMC: " + e);
-  }
+
+
+    //tbody da tabela
+    document.getElementById('cadastro').innerHTML = template;
 }
-  
-
-
-

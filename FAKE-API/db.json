@@ -1,0 +1,89 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Anne",
+      "idade": 67
+    },
+    {
+      "nome": "Anne",
+      "idade": "18",
+      "id": "CxwGLV3Vz8Q"
+    },
+    {
+      "nome": "Milena",
+      "idade": "17",
+      "id": "IPz0-7T9l1s"
+    },
+    {
+      "nome": "Rawany",
+      "idade": "67",
+      "id": "kEzWcvTdjlM"
+    },
+    {
+      "nome": "Fidalgo",
+      "idade": "13",
+      "id": "rI_fTZTOGLQ"
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Anne",
+      "altura": 1.65,
+      "peso": 51,
+      "IMC": 18.73278236914601,
+      "textoSituaco": "Saudavel",
+      "id": "HshzsWBEEJ8"
+    },
+    {
+      "nome": "Raw",
+      "altura": 1.69,
+      "peso": 50,
+      "IMC": 17.506389832288786,
+      "textoSituaco": "Magreza leve",
+      "id": "WU-uK0L0WJ8"
+    },
+    {
+      "nome": "Milena",
+      "altura": 1.73,
+      "peso": 68,
+      "IMC": 22.720438370810918,
+      "textoSitaco": "Saudavel",
+      "id": "Z4bRT_64CjA"
+    },
+    {
+      "nome": "Guga",
+      "altura": 1.75,
+      "peso": 60,
+      "IMC": 19.591836734693878,
+      "textoSituaco": "Saudavel",
+      "id": "fJ3FhHtwc6E"
+    },
+    {
+      "nome": "Fidalgo",
+      "altura": 1.75,
+      "peso": 60,
+      "IMC": 19.591836734693878,
+      "textoSituaco": "Saudavel",
+      "id": "KxDOfyK7Vyk"
+    },
+    {
+      "nome": "Torolho",
+      "altura": 1.83,
+      "peso": 67,
+      "IMC": 20.00656932126967,
+      "textoSituaco": "Saudavel",
+      "id": "uX7aJVyOZBI"
+    }
+  ],
+  "calculo": [
+    {
+      "n1": 7,
+      "n2": 6,
+      "op": "soma",
+      "resultado": "13.00",
+      "id": "u0cWVy4W-Gk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
