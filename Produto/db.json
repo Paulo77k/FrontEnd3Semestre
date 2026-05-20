@@ -1,0 +1,57 @@
+{
+  "produtos": [
+    {
+      "nome": "Notebook",
+      "preco": 5000,
+      "descricao": "Notebook Gamer.",
+      "quantidade": 3,
+      "imagem": "image.jpg",
+      "id": "S2AH7rNyqII"
+    },
+    {
+      "nome": "fidalgo",
+      "preco": -1,
+      "descricao": "Molestado de alta qualidade gamer",
+      "quantidade": 1,
+      "imagem": "image.jpg",
+      "id": "XNbVu792wf4"
+    },
+    {
+      "objCadastro": {
+        "nome": "julio beijoqueiro",
+        "preco": 42,
+        "descricao": "JULIO QUE BEIJOU TODAS AS MENINAS DA SALA ELE E UMA MAQUINA DE PORRA",
+        "quantidade": 67,
+        "imagem": "image.jpg"
+      },
+      "id": "CZJZn9Oo4j0"
+    },
+    {
+      "objCadastro": {
+        "nome": "julio beijoqueiro",
+        "preco": 42,
+        "descricao": "JULIO QUE BEIJOU TODAS AS MENINAS DA SALA ELE E UMA MAQUINA DE PORRA",
+        "quantidade": 67,
+        "imagem": "image.jpg"
+      },
+      "id": "XhKpy32eoPg"
+    },
+    {
+      "nome": "julio beijoqueiro",
+      "preco": 42,
+      "descricao": "sad",
+      "quantidade": 67,
+      "imagem": "image.jpg",
+      "id": "ZTpLS108k00"
+    },
+    {
+      "nome": "julio beijoqueiro",
+      "preco": 42,
+      "descricao": "sad",
+      "quantidade": 67,
+      "imagem": "image.jpg",
+      "id": "7G4ogOMKdyg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
