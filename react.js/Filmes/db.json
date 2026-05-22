@@ -1,0 +1,25 @@
+{
+  "generos": [
+    {
+      "id": "1",
+      "nome": "Acao"
+    },
+    {
+      "id": "2",
+      "nome": "Comedia"
+    },
+    {
+      "id": "3",
+      "nome": "Drama"
+    },
+    {
+      "nome": "Terror",
+      "id": "O52znFpoE3A"
+    },
+    {
+      "nome": "Romance",
+      "id": "O4_lF-Pggag"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
