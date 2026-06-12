@@ -10,6 +10,7 @@ const Rotas = () => {
         <Route path="/" element={<Login />} />
         <Route path="/filmes" element={<CadastroFilme />} />
         <Route path="/generos" element={<CadastroGenero />} />
+        
       </Routes>
     </BrowserRouter>
   );
